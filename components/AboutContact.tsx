@@ -48,7 +48,8 @@ export default function AboutContact() {
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          <div className="flex flex-col justify-center gap-5 rounded-2xl border border-offwhite/15 bg-gradient-to-br from-offwhite/[0.14] to-accent/[0.10] p-7 shadow-xl shadow-black/30 backdrop-blur-2xl sm:p-9">
+          {/* SEO DEĞİŞİKLİĞİ: Semantik <address> etiketi kullanıldı */}
+          <address className="not-italic flex flex-col justify-center gap-5 rounded-2xl border border-offwhite/15 bg-gradient-to-br from-offwhite/[0.14] to-accent/[0.10] p-7 shadow-xl shadow-black/30 backdrop-blur-2xl sm:p-9">
             {details.map((detail) => {
               const content = (
                 <div className="flex items-center gap-4">
@@ -83,15 +84,20 @@ export default function AboutContact() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="WhatsApp üzerinden bizimle iletişime geçin"
               className="mt-2 inline-flex w-fit items-center justify-center rounded-full bg-accent px-6 py-3 font-montserrat text-sm font-semibold text-offwhite transition-colors hover:bg-blue-600"
             >
               WhatsApp&apos;tan Yazın
             </a>
-          </div>
+          </address>
 
           {/* Google Haritalar yer tutucu — gerçek adres/embed linki netleştiğinde
               buraya <iframe src="..."> ile canlı harita eklenecek. */}
-          <div className="relative flex min-h-[280px] flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl border border-offwhite/15 bg-offwhite/[0.04] p-7">
+          {/* SEO DEĞİŞİKLİĞİ: aria-label eklendi */}
+          <div
+            className="relative flex min-h-[280px] flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl border border-offwhite/15 bg-offwhite/[0.04] p-7"
+            aria-label="İşletme konumumuz: İskenderun, Hatay"
+          >
             <div
               aria-hidden="true"
               className="absolute inset-0 opacity-[0.15]"

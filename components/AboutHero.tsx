@@ -31,7 +31,7 @@ export default function AboutHero() {
           sunan ajanslardan farklı olarak; İskenderun ve Hatay&apos;ın her
           köşesindeki esnafı, mağaza sahibini ve hizmet sektörünü yakından
           tanıyoruz. Amacımız sadece dijitalde var olmanızı değil, kasanıza
-          giren parayı artırmayı sağlayan bütünsel bir sistem kurmaktır.
+          giren parayı artırmayı sağlayan <strong>bütünsel bir sistem kurmaktır.</strong>
         </p>
       </div>
     </section>

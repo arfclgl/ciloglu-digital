@@ -1,5 +1,6 @@
 export const SITE_NAME = "Ciloglu Digital";
-export const SITE_URL = "https://ciloglu.digital";
+
+export const SITE_URL = "https://cilogludigital.com.tr";
 
 export const PHONE_DISPLAY = "0546 909 8711";
 export const PHONE_INTL = "+90 546 909 8711";

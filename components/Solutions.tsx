@@ -13,77 +13,67 @@ import {
 } from "lucide-react";
 import BrandWatermark from "./BrandWatermark";
 
-const avroSteps = [
+const avroSteps = [ /* Veriler aynı */ 
   {
     number: "01",
     icon: Search,
     title: "Analiz",
     subtitle: "Kusursuz Stratejinin Temeli",
-    description:
-      "Her işletmenin dinamiği farklıdır. İşe, markanızı ve mevcut yapınızı derinlemesine inceleyerek başlıyoruz. Hedeflerinize en kısa ve en kârlı yoldan ulaşmanızı sağlayacak, tamamen size özel bir büyüme stratejisi haritası çıkarıyoruz.",
+    description: "Her işletmenin dinamiği farklıdır. İşe, markanızı ve mevcut yapınızı derinlemesine inceleyerek başlıyoruz. Hedeflerinize en kısa ve en kârlı yoldan ulaşmanızı sağlayacak, tamamen size özel bir büyüme stratejisi haritası çıkarıyoruz.",
   },
   {
     number: "02",
     icon: MonitorSmartphone,
     title: "Vitrin",
     subtitle: "Amaca Uygun Dijital Kimlik",
-    description:
-      "Belirlediğimiz stratejiyi sahaya yansıtıyoruz. Markanızın yapısı ağırbaşlı bir kurumsallık gerektiriyorsa otoriter, sıcak bir bağ kurmanız gerekiyorsa samimi bir dijital vitrin inşa ediyoruz. Ziyaretçinin ilk saniyede markanıza güvenmesini sağlıyoruz.",
+    description: "Belirlediğimiz stratejiyi sahaya yansıtıyoruz. Markanızın yapısı ağırbaşlı bir kurumsallık gerektiriyorsa otoriter, sıcak bir bağ kurmanız gerekiyorsa samimi bir dijital vitrin inşa ediyoruz. Ziyaretçinin ilk saniyede markanıza güvenmesini sağlıyoruz.",
   },
   {
     number: "03",
     icon: Megaphone,
     title: "Reklam",
     subtitle: "Doğru Kitle, Kusursuz Zamanlama",
-    description:
-      "Rastgele kitlelere bütçe yakma devrini kapatıyoruz. Geliştirdiğimiz hedefleme yöntemleriyle; hizmetinize tam o anda ihtiyaç duyan kitleyi buluyoruz. Mesajınızı doğru kişiye ulaştırarak bütçenizi verimli bir yatırıma dönüştürüyoruz.",
+    description: "Rastgele kitlelere bütçe yakma devrini kapatıyoruz. Geliştirdiğimiz hedefleme yöntemleriyle; hizmetinize tam o anda ihtiyaç duyan kitleyi buluyoruz. Mesajınızı doğru kişiye ulaştırarak bütçenizi verimli bir yatırıma dönüştürüyoruz.",
   },
   {
     number: "04",
     icon: Workflow,
     title: "Otomasyon",
     subtitle: "Trafiği Satışa Çeviren Güç",
-    description:
-      "Önemli olan tıklamalar değil, cirodur. Özel satış otomasyonlarımız tam bu noktada devreye giriyor. Reklamdan gelen müşterileri anında karşılıyor, süreci profesyonelce yöneterek satış ihtimalini zirveye taşıyoruz. Size sadece hazır müşterilerle masaya oturmak kalıyor.",
+    description: "Önemli olan tıklamalar değil, cirodur. Özel satış otomasyonlarımız tam bu noktada devreye giriyor. Reklamdan gelen müşterileri anında karşılıyor, süreci profesyonelce yöneterek satış ihtimalini zirveye taşıyoruz. Size sadece hazır müşterilerle masaya oturmak kalıyor.",
   },
 ];
 
-const services = [
+const services = [ /* Veriler aynı */ 
   {
     icon: Globe,
     title: "Web Sitesi ve Google Haritalar Kurulumu",
-    description:
-      "Doğrudan satışa odaklı bir web sitesi inşa ediyoruz. Eş zamanlı olarak Google İşletme ve Haritalar kayıtlarınızı eksiksiz yaparak, sizi arayan yerel müşterilerin size anında ulaşmasını sağlıyoruz.",
+    description: "Doğrudan satışa odaklı bir web sitesi inşa ediyoruz. Eş zamanlı olarak Google İşletme ve Haritalar kayıtlarınızı eksiksiz yaparak, sizi arayan yerel müşterilerin size anında ulaşmasını sağlıyoruz.",
   },
   {
     icon: Share2,
     title: "Sosyal Medya Yönetimi",
-    description:
-      "Hesaplarınızı profesyonel bir vitrine dönüştürüyoruz. Sektörünüze uygun, güven veren içerik ve tasarımlarla marka imajınızı oluşturuyor, hedef kitlenizle doğru iletişimi kuruyoruz.",
+    description: "Hesaplarınızı profesyonel bir vitrine dönüştürüyoruz. Sektörünüze uygun, güven veren içerik ve tasarımlarla marka imajınızı oluşturuyor, hedef kitlenizle doğru iletişimi kuruyoruz.",
   },
   {
     icon: Target,
     title: "Meta (Facebook & Instagram) Reklam Yönetimi",
-    description:
-      "Bütçenizi boş kampanyalara harcamıyoruz. Hizmetinize gerçekten ihtiyacı olan kitleyi tespit edip, onlara yönelik stratejik reklamlar çıkararak kesintisiz müşteri trafiği sağlıyoruz.",
+    description: "Bütçenizi boş kampanyalara harcamıyoruz. Hizmetinize gerçekten ihtiyacı olan kitleyi tespit edip, onlara yönelik stratejik reklamlar çıkararak kesintisiz müşteri trafiği sağlıyoruz.",
   },
   {
     icon: Filter,
     title: "Satış Otomasyonları ve Funnel Sistemleri",
-    description:
-      "Yoğun mesaj trafiğini özel yazılım ve otomasyonlarla karşılıyoruz. Sadece “fiyat soran” kitleyi eliyor, masanıza yalnızca satın almaya hazır hale gelmiş müşterileri getiriyoruz.",
+    description: "Yoğun mesaj trafiğini özel yazılım ve otomasyonlarla karşılıyoruz. Sadece “fiyat soran” kitleyi eliyor, masanıza yalnızca satın almaya hazır hale gelmiş müşterileri getiriyoruz.",
   },
   {
     icon: Camera,
     title: "Profesyonel Kamera ve Drone Çekimleri",
-    description:
-      "Markanızın kalitesini dijitalde en üst seviyede yansıtmak için; yüksek çözünürlüklü kameralar ve drone ile profesyonel fotoğraf/video prodüksiyon hizmeti sunuyoruz.",
+    description: "Markanızın kalitesini dijitalde en üst seviyede yansıtmak için; yüksek çözünürlüklü kameralar ve drone ile profesyonel fotoğraf/video prodüksiyon hizmeti sunuyoruz.",
   },
   {
     icon: Users,
     title: "Dijital Büyüme Danışmanlığı",
-    description:
-      "İşletme sahipleriyle omuz omuza çalışarak; dijital yatırımlarınızı, bütçe yönetiminizi ve uzun vadeli ölçeklenme stratejilerinizi birlikte planlıyoruz.",
+    description: "İşletme sahipleriyle omuz omuza çalışarak; dijital yatırımlarınızı, bütçe yönetiminizi ve uzun vadeli ölçeklenme stratejilerinizi birlikte planlıyoruz.",
   },
 ];
 
@@ -118,6 +108,7 @@ export default function Solutions() {
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
               alt="Ofiste büyüme stratejisi planlayan ekip"
               fill
+              loading="lazy" /* SEO DEĞİŞİKLİĞİ: Sayfa altı görseli olduğu için lazy load */
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover"
             />
@@ -134,9 +125,11 @@ export default function Solutions() {
             büyüme altyapımız.
           </p>
 
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {/* SEO DEĞİŞİKLİĞİ: div yerine ul (unordered list) kullanıldı */}
+          <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {avroSteps.map((step) => (
-              <div key={step.number} className={lightCard}>
+              /* SEO DEĞİŞİKLİĞİ: div yerine li (list item) kullanıldı */
+              <li key={step.number} className={lightCard}>
                 <div className="flex items-center justify-between">
                   <span className="font-syne text-3xl font-bold text-navy/10">
                     {step.number}
@@ -154,9 +147,9 @@ export default function Solutions() {
                 <p className="mt-3 font-sans text-sm leading-relaxed text-navy/65">
                   {step.description}
                 </p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
 
         {/* Hizmetlerimiz */}
@@ -169,9 +162,11 @@ export default function Solutions() {
             zaman ve nakit akışı kazandıran somut hizmetler.
           </p>
 
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {/* SEO DEĞİŞİKLİĞİ: div yerine ul (unordered list) kullanıldı */}
+          <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
-              <div key={service.title} className={lightCard}>
+              /* SEO DEĞİŞİKLİĞİ: div yerine li (list item) kullanıldı */
+              <li key={service.title} className={lightCard}>
                 <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-offwhite">
                   <service.icon className="h-6 w-6" strokeWidth={2} />
                 </span>
@@ -181,9 +176,9 @@ export default function Solutions() {
                 <p className="mt-3 font-sans text-sm leading-relaxed text-navy/65">
                   {service.description}
                 </p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

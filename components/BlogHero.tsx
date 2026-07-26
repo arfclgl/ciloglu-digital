@@ -17,6 +17,7 @@ export default function BlogHero() {
           Güncel &amp; Blog
         </span>
 
+        {/* Ana başlık H1 olarak kalıyor, hiyerarşinin zirvesi */}
         <h1 className="mt-6 font-syne text-4xl font-bold leading-[1.1] tracking-tighter text-offwhite sm:text-5xl">
           Dijital Büyüme Rehberi
         </h1>

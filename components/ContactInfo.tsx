@@ -7,6 +7,8 @@ import {
   PHONE_INTL,
   SERVICE_AREA,
   WHATSAPP_LINK,
+  SITE_NAME,
+  SITE_URL,
 } from "@/lib/constants";
 
 const details = [
@@ -30,12 +32,33 @@ const details = [
   },
 ];
 
+// SEO DEĞİŞİKLİĞİ: İletişim bölümü için ContactPoint Şeması
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE_NAME,
+  url: SITE_URL,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: PHONE_INTL,
+    contactType: "customer service",
+    email: CONTACT_EMAIL,
+    areaServed: ["Hatay", "İskenderun", "Antakya"],
+    availableLanguage: "Turkish",
+  },
+};
+
 export default function ContactInfo() {
   return (
     <section
       id="iletisim"
       className="relative scroll-mt-24 overflow-hidden bg-navy py-24 sm:py-32"
     >
+      {/* SEO DEĞİŞİKLİĞİ: JSON-LD Scripti Eklendi */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
       <BrandWatermark
         tone="accent"
         className="absolute -right-16 -top-16 h-72 w-72 opacity-[0.05] sm:h-96 sm:w-96"
@@ -57,6 +80,7 @@ export default function ContactInfo() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="WhatsApp üzerinden bizimle iletişime geçin"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 font-montserrat text-base font-semibold text-offwhite shadow-lg shadow-accent/25 transition-all hover:bg-blue-600"
               >
                 WhatsApp&apos;tan Yazın
@@ -66,7 +90,8 @@ export default function ContactInfo() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-5 rounded-2xl border border-offwhite/15 bg-gradient-to-br from-offwhite/[0.14] to-accent/[0.10] p-7 shadow-xl shadow-black/30 backdrop-blur-2xl sm:p-9">
+          {/* SEO DEĞİŞİKLİĞİ: Adres ve iletişim bilgileri için semantik <address> etiketi */}
+          <address className="not-italic flex flex-col gap-5 rounded-2xl border border-offwhite/15 bg-gradient-to-br from-offwhite/[0.14] to-accent/[0.10] p-7 shadow-xl shadow-black/30 backdrop-blur-2xl sm:p-9">
             {details.map((detail) => {
               const content = (
                 <div className="flex items-start gap-4">
@@ -96,7 +121,7 @@ export default function ContactInfo() {
                 <div key={detail.label}>{content}</div>
               );
             })}
-          </div>
+          </address>
         </div>
       </div>
     </section>

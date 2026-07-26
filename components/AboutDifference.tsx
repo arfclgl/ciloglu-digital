@@ -54,9 +54,11 @@ export default function AboutDifference() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        {/* SEO DEĞİŞİKLİĞİ: Semantik liste yapısı <ul> eklendi */}
+        <ul className="mt-14 grid gap-6 md:grid-cols-2">
           {points.map((point) => (
-            <div
+            /* SEO DEĞİŞİKLİĞİ: Her bir kart <li> yapıldı */
+            <li
               key={point.keep}
               className="flex gap-5 rounded-2xl border border-navy/10 bg-white/50 p-7 shadow-lg shadow-navy/10 backdrop-blur-2xl transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:border-accent/40 hover:bg-white/85 hover:shadow-2xl hover:shadow-accent/20"
             >
@@ -74,9 +76,9 @@ export default function AboutDifference() {
                   {point.description}
                 </p>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

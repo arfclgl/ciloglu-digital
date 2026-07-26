@@ -25,14 +25,16 @@ export default function Hero() {
 
       <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
         <div className="text-left">
-          <span className="animate-fade-in-up animation-delay-150 animate-badge-glow inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-accent to-blue-500 px-4 py-2 font-montserrat text-[11px] font-bold uppercase tracking-wide text-offwhite ring-1 ring-inset ring-offwhite/25 sm:px-5 sm:text-xs sm:tracking-widest">
+          {/* SEO DEĞİŞİKLİĞİ: H1 anahtar kelime hedefine taşındı */}
+          <h1 className="animate-fade-in-up animation-delay-150 animate-badge-glow inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-accent to-blue-500 px-4 py-2 font-montserrat text-[11px] font-bold uppercase tracking-wide text-offwhite ring-1 ring-inset ring-offwhite/25 sm:px-5 sm:text-xs sm:tracking-widest">
             <Sparkles className="h-3.5 w-3.5 shrink-0" strokeWidth={2.5} />
             Hatay&apos;ın Dijital Büyüme Ajansı
-          </span>
-
-          <h1 className="animate-fade-in-up animation-delay-300 mt-6 font-syne text-4xl font-bold leading-[1.1] tracking-tighter text-offwhite sm:text-5xl lg:text-5xl xl:text-6xl">
-            Satış yok çünkü sistem yok.
           </h1>
+
+          {/* SEO DEĞİŞİKLİĞİ: Destekleyici metin H2 yapıldı */}
+          <h2 className="animate-fade-in-up animation-delay-300 mt-6 font-syne text-4xl font-bold leading-[1.1] tracking-tighter text-offwhite sm:text-5xl lg:text-5xl xl:text-6xl">
+            Satış yok çünkü sistem yok.
+          </h2>
 
           <p className="animate-fade-in-up animation-delay-450 mt-6 max-w-xl font-sans text-base leading-relaxed text-offwhite/75 sm:text-lg">
             İşletmenizi geleneksel&apos;in dar kalıplarından kurtarıyor;
@@ -43,6 +45,7 @@ export default function Hero() {
           <div className="animate-fade-in-up animation-delay-450 mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <HashNavLink
               href="/#iletisim"
+              aria-label="İletişim bölümüne git"
               className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 font-montserrat text-base font-semibold text-offwhite shadow-lg shadow-accent/25 transition-all hover:bg-blue-600 sm:w-auto"
             >
               Bize Ulaşın

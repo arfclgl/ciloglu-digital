@@ -75,7 +75,8 @@ export default function Footer() {
             <h4 className="font-montserrat text-sm font-bold uppercase tracking-wide text-offwhite/50">
               İletişim
             </h4>
-            <div className="mt-4 flex flex-col gap-2.5">
+            {/* SEO DEĞİŞİKLİĞİ: div yerine semantik <address> etiketi kullanıldı */}
+            <address className="not-italic mt-4 flex flex-col gap-2.5">
               <a
                 href={WHATSAPP_LINK}
                 target="_blank"
@@ -87,13 +88,13 @@ export default function Footer() {
               <p className="font-sans text-sm leading-relaxed text-offwhite/70">
                 {SERVICE_AREA}
               </p>
-            </div>
+            </address>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-offwhite/10 pt-6 sm:flex-row">
           <p className="font-sans text-xs text-offwhite/45">
-            © {year} Ciloglu Digital. Tüm hakları saklıdır.
+            ©️ {year} Ciloglu Digital. Tüm hakları saklıdır.
           </p>
           <p className="font-sans text-xs text-offwhite/45">
             İskenderun · Antakya · Hatay Geneli Hizmet

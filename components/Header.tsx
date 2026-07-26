@@ -38,7 +38,8 @@ export default function Header() {
           <Logo variant={isSolid ? "dark" : "light"} />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        {/* SEO DEĞİŞİKLİĞİ: aria-label="Ana Menü" eklendi */}
+        <nav aria-label="Ana Menü" className="hidden items-center gap-8 lg:flex">
           {NAV_LINKS.map((link) => (
             <HashNavLink
               key={link.href}
@@ -74,7 +75,8 @@ export default function Header() {
 
       {menuOpen && (
         <div className="border-t border-navy/10 bg-offwhite px-5 pb-6 pt-2 lg:hidden">
-          <nav className="flex flex-col gap-1">
+          {/* SEO DEĞİŞİKLİĞİ: aria-label="Mobil Menü" eklendi */}
+          <nav aria-label="Mobil Menü" className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <HashNavLink
                 key={link.href}

@@ -37,6 +37,7 @@ export default function AudienceFilter() {
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
+          {/* Uygun Olanlar Listesi */}
           <div className="rounded-2xl border border-accent/30 bg-offwhite/[0.06] p-7 sm:p-9">
             <h3 className="font-montserrat text-lg font-bold text-offwhite">
               Bu Sistem Kimler İçin Uygun?
@@ -44,7 +45,11 @@ export default function AudienceFilter() {
             <ul className="mt-6 space-y-4">
               {fitFor.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-offwhite">
+                  {/* SEO DEĞİŞİKLİĞİ: aria-label="Uygun" eklendi */}
+                  <span
+                    aria-label="Uygun"
+                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-offwhite"
+                  >
                     <Check className="h-3.5 w-3.5" strokeWidth={3} />
                   </span>
                   <span className="font-sans text-sm leading-relaxed text-offwhite/80">
@@ -55,6 +60,7 @@ export default function AudienceFilter() {
             </ul>
           </div>
 
+          {/* Uygun Olmayanlar Listesi */}
           <div className="rounded-2xl border border-offwhite/10 bg-offwhite/[0.03] p-7 sm:p-9">
             <h3 className="font-montserrat text-lg font-bold text-offwhite/70">
               Bu Sistem Kimler İçin Uygun Değil?
@@ -62,7 +68,11 @@ export default function AudienceFilter() {
             <ul className="mt-6 space-y-4">
               {notFitFor.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-offwhite/10 text-offwhite/50">
+                  {/* SEO DEĞİŞİKLİĞİ: aria-label="Uygun Değil" eklendi */}
+                  <span
+                    aria-label="Uygun Değil"
+                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-offwhite/10 text-offwhite/50"
+                  >
                     <X className="h-3.5 w-3.5" strokeWidth={3} />
                   </span>
                   <span className="font-sans text-sm leading-relaxed text-offwhite/45">
