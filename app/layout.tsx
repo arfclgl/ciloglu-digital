@@ -83,6 +83,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "q5OXZ8rF-EoBPVa3cJ3D9MhZ7yJYc4Z8kbNDdbpEaOk",
+  },
 };
 
 const localBusinessJsonLd = {
