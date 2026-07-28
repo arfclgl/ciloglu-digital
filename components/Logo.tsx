@@ -21,8 +21,8 @@ export default function Logo({
       <Image
         src="/brand/logo-icon.png"
         alt={showWordmark ? "" : "Ciloglu Digital"}
-        width={749}
-        height={626}
+        width={757}
+        height={627}
         priority
         className="h-9 w-auto shrink-0 sm:h-10"
       />
