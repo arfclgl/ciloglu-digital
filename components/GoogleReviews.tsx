@@ -1,4 +1,3 @@
-import { Star, Quote } from "lucide-react";
 import BrandWatermark from "./BrandWatermark";
 import { SITE_NAME } from "@/lib/constants"; // Sabitlerden site adını çekmek için ekledim
 
@@ -75,44 +74,14 @@ export default function GoogleReviews() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {reviews.map((review) => (
-            /* SEO DEĞİŞİKLİĞİ: Semantik <figure> kullanımı */
-            <figure
-              key={review.name}
-              className="group relative flex flex-col rounded-2xl border border-slate-100 bg-white p-7 shadow-lg shadow-slate-900/5 transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl hover:shadow-accent/10"
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex gap-0.5" aria-label={`${review.rating} Yıldız`}>
-                  {Array.from({ length: review.rating }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-4 w-4 fill-accent text-accent"
-                      strokeWidth={0}
-                    />
-                  ))}
-                </div>
-                <Quote className="h-6 w-6 text-navy/15" strokeWidth={1.5} />
-              </div>
-
-              {/* SEO DEĞİŞİKLİĞİ: Alıntılar için <blockquote> kullanımı */}
-              <blockquote className="mt-5 flex-1">
-                <p className="font-sans text-sm leading-relaxed text-navy/75">
-                  &quot;{review.quote}&quot;
-                </p>
-              </blockquote>
-
-              {/* SEO DEĞİŞİKLİĞİ: Yazar bilgisi için <figcaption> kullanımı */}
-              <figcaption className="mt-6 border-t border-slate-100 pt-4">
-                <p className="font-montserrat text-sm font-bold text-navy">
-                  {review.name}
-                </p>
-                <p className="mt-0.5 font-sans text-xs text-navy/50">
-                  {review.business}
-                </p>
-              </figcaption>
-            </figure>
-          ))}
+        <div className="mt-14">
+          {/* TODO: Google Reviews widget script'i buraya entegre edilecek */}
+          <div
+            id="google-reviews-widget-container"
+            className="w-full min-h-[300px] flex items-center justify-center border border-dashed border-gray-600 rounded-lg text-gray-400"
+          >
+            Google Yorumlar Widget Alanı
+          </div>
         </div>
       </div>
     </section>

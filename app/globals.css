@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   --background: #f8fafc;
@@ -19,6 +20,26 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* --- Blog makale gövdesi (prose) marka uyarlaması --- */
+.prose {
+  --tw-prose-body: var(--color-navy);
+  --tw-prose-headings: var(--color-navy);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-bold: var(--color-navy);
+  --tw-prose-bullets: var(--color-accent);
+  --tw-prose-counters: var(--color-accent);
+  --tw-prose-quotes: var(--color-navy);
+  --tw-prose-quote-borders: var(--color-accent);
+  --tw-prose-hr: rgb(15 23 42 / 0.1);
+  --tw-prose-th-borders: rgb(15 23 42 / 0.15);
+  --tw-prose-td-borders: rgb(15 23 42 / 0.08);
+}
+
+.prose :where(h1, h2, h3, h4) {
+  font-family: var(--font-syne);
+  letter-spacing: -0.02em;
 }
 
 body {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { SITE_NAME, SITE_URL } from "@/lib/constants";
+import { SITE_URL } from "@/lib/constants";
+import { getAllPosts } from "@/lib/markdown";
 import BlogHero from "@/components/BlogHero";
 import BlogGrid from "@/components/BlogGrid";
 
@@ -14,10 +15,12 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  const posts = getAllPosts();
+
   return (
     <>
       <BlogHero />
-      <BlogGrid />
+      <BlogGrid posts={posts} />
     </>
   );
 }
